@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1710313984 source:d:\projecthk2\main.cpp
+	<iostream>
+
+1710313852 source:d:\projecthk2\graphics.cpp
+	"defs.h"
+	"Graphics.h"
+
+1710312686 d:\projecthk2\defs.h
+	<SDL.h>
+	<bits/stdc++.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<sstream>
+	<fstream>
+
+1710313829 d:\projecthk2\graphics.h
+	"defs.h"
+

@@ -1,20 +1,16 @@
-#ifndef _DEFS__H
-#define _DEFS__H
+#ifndef DEFS
+#define DEFS
 
-const int SCREEN_WIDTH = 1300;
-const int SCREEN_HEIGHT = 700;
-static SDL_Event* g_even ;
-static SDL_Window* g_window=NULL;
-static SDL_Renderer* g_screen=NULL;
-const int step=5;
-
-typedef struct input{
-int left;
-int right;
-int up;
-int down;
-int jump;
-};
-#define WINDOW_TITLE "DEMO GAME"
-
-#endif
+#include<SDL.h>
+#include<bits/stdc++.h>
+#include<SDL_image.h>
+#include<SDL_mixer.h>
+#include<SDL_ttf.h>
+#include<sstream>
+#include<fstream>
+using namespace std;
+const int SCREEN_WIDTH=800;
+const int SCREEN_HEIGHT=400;
+const int ground=350;
+const int RENDER_DRAW_COLOR = 255;
+#endif // DEFS

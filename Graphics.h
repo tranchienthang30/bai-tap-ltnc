@@ -1,26 +1,44 @@
-#ifndef _GRAPHICS__H
-#define _GRAPHICS__H
+#ifndef GRAPHICS
+#define GRAPHICS
+#include"defs.h"
+using namespace std;
+bool init(SDL_Window* &gWindow, SDL_Renderer* &gRenderer, const char* WINDOW_TITLE);
+class Graphics
+{
+public:
+    Graphics(); // Constructor
+    ~Graphics(); // Destructor
 
-#include <SDL.h>
-#include <SDL_image.h>
-#include "defs.h"
 
-void foo();
+    void free();
 
-struct Graphics {
-    SDL_Renderer *renderer;
-	SDL_Window *window;
+    // Load media
+    bool LoadMedia_file(string path, SDL_Renderer* &gRenderer);
+    // Load texts
+    bool LoadText_file(string textureText, SDL_Color textColor, SDL_Renderer* &gRenderer, TTF_Font *&gFont);
 
-	void logErrorAndExit(const char* msg, const char* error);
-	void init();
-	void prepareScene(SDL_Texture * background);
-    void presentScene();
-    SDL_Texture *loadTexture(const char *filename);
-    void renderTexture(SDL_Texture *texture, int x, int y);
-    void blitRect(SDL_Texture *texture, SDL_Rect *src, int x, int y);
-    void quit();
-  //  void Event(SDL_Event *events);
- //   void HandleInput(SDL_Event events);
+    //Renders texture at given point
+    void render( int x, int y,SDL_Renderer* &gRenderer);
+
+    //Gets texture dimensions
+    SDL_Texture* getTexture();
+    int getWidth();
+    int getHeight();
+
+private:
+    SDL_Texture* mTexture;
+
+    //Texture dimensions
+    int mWidth;
+    int mHeight;
 };
-
-#endif // _GRAPHICS__H
+// nhảy, nền, chướng ngại vật 1, chướng ngại vật 2,
+bool loadMedia(Graphics &gPlayer_jump, Graphics &gPlayer_background, Graphics &gThreat1, Graphics &gThreat2, Graphics &gPause,
+               Graphics &gResume, Graphics &gScore, Graphics &game_over,Graphics &play_again, Graphics &exit_game,
+               Mix_Music *&gMusic, Mix_Chunk *&gjump, Mix_Chunk *&gdeath, TTF_Font *&gFont, SDL_Renderer* &gRenderer, Graphics &gPlayer_ground, SDL_Rect &player_rect,
+               int &frame_width, Graphics &gHiscore, Graphics &gRocket1, Graphics &gRocket2, Graphics &gWarning, Graphics &how_to_play);
+void close(Graphics &gPlayer_jump, Graphics &gPlayer_background, Graphics &gThreat1, Graphics &gThreat2,
+          Graphics &gPause, Graphics &gResume, Graphics &gScore, Graphics &game_over, Graphics &play_again,
+          Graphics &exit_game, Mix_Music *&gMusic, Mix_Chunk *&gjump, Mix_Chunk *&gdeath, TTF_Font *&gFont, Graphics &current_score, SDL_Window *&gWindow, SDL_Renderer* &gRenderer,
+           Graphics &gPlayer_ground, Graphics &gHiscore, Graphics &gRocket1, Graphics &gRocket2, Graphics &gWarning, Graphics &how_to_play);
+#endif // GRAPHICS
