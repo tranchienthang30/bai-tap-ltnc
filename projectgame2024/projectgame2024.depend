@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1716366629 source:d:\projectgame2024\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<stdio.h>
+	<string>
+	<iostream>
+	<bits/stdc++.h>
+	"defs.h"
+	<SDL_ttf.h>
+	<windows.h>
+
+1712825415 d:\projectgame2024\graphics.h
+
+1715243876 d:\projectgame2024\defs.h
+	<SDL.h>
+	<bits/stdc++.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<sstream>
+	<fstream>
+	"LTexture.h"
+
+1712824782 source:d:\projectgame2024\graphics.cpp
+	"defs.h"
+	"graphics.h"
+
+1710078709 d:\projectgame2024\game.h
+
+1710152456 d:\projectgame2024\mainobject.h
+	"graphics.h"
+	"game.h"
+	"defs.h"
+
+1710152252 source:d:\projectgame2024\mainobject.cpp
+
+1714643170 d:\projectgame2024\ltexture.h
+	"defs.h"
+
+1712824271 d:\projectgame2024\character.h
+	<SDL.h>
+	<bits/stdc++.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	<sstream>
+	<fstream>
+
+1712824570 source:d:\projectgame2024\character.cpp
+	"defs.h"
+	"character.h"
+	"graphics.h"
+
+1713197694 source:d:\projectgame2024\defs.cpp
+	"defs.h"
+
+1714643170 source:d:\projectgame2024\ltexture.cpp
+	"LTexture.h"
+
