@@ -292,8 +292,8 @@ void ma::move()
     r1PosX-= RUN_DISTANCE*1.5;
     r2PosX+= RUN_DISTANCE*1.25;
    //if(dem==0||dem==1)
-    if(t1PosX+ ma_WIDTH < 0) t1PosX = SCREEN_WIDTH+300;
-    if(t2PosX+ ma_WIDTH < 0) t2PosX = SCREEN_WIDTH+500+rand()%100;
+    if(t1PosX+ ma_WIDTH < 0) t1PosX = SCREEN_WIDTH+500;
+    if(t2PosX+ ma_WIDTH < 0) t2PosX = SCREEN_WIDTH+600;
 
 
     if(r1PosX< 0)
